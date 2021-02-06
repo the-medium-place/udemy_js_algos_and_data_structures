@@ -1,0 +1,55 @@
+Big O provides vocabulary to describe functional efficiency throughout JS programs
+relationship between input size and run time
+
+
+performance.now() -- check system time (can be used before and after algorithm to calculate runtime)
+(useable in browser 'snippets' tab)
+
+TIME COMPLEXITY!!
++++++++++++++++++++++++++++++++++++++++++++++++++
+example:
+var t1 = performance.now();
+// function to run here
+var t2 = performance.now();
+console.log(`Elapsed time: ${(t2 - t1) / 1000} seconds`);
+
+For loops have O(n) complexity, so....
+ * nesting 'for' loops exponentially increases time complexity (multiplying by 'n' with each nest level)
+ * O(n^2), etc.
+Bit O Shorthands:
+======================================
+1- Arithmetic operations are constant
+2- variable assignment is constant
+3- accessing elements in array (by index) or object (by key) is constant
+4- in a loop, the complexity is the length of the loop TIMES the complexity of whatever happens inside of the loop
+
+
+SPACE COMPLEXITY! (the amount of memory taken up)
+++++++++++++++++++++++++++++++++++++++++++++++++
+(actually talking about 'auxiliary space complexity')
+
+- Most primitive datatypes are constant space
+- Strings: require O(n) space (where n is str length)
+- Reference types (arrays, objs): require O(n) space (where n is the length (for arrays) or the number of keys (for objs))
+
+LOGARITHMS:
+++++++++++++++++++++++++++++++++++++++++++
+inverse of exponential:
+ie. log2(8) = 3 (because 2^3 = 8)
+
+Logarithmic time complexity is great! 
+O(log n) time complexity is only slightly slower than O(1)!!
+
+Certain searching algorithms have logarithmic time complexity...
+Efficient sorting algos involve logarithms...
+Recursion sometimes involves logarithmic *space* complexity...
+
+
+RECAP!!!!
++++++++++++++++++++++++++
+* To analyze the performace of an algorithm we use Big O Notation
+* Big O Notation can give us a high level understanding of the time or space complexity of an algorithm
+* Big O NOtation doesn't care about precision, only about general trends (linear? quadratic? constant?)
+* The time or space complexity 9as measured by Bit O) depends only on te algorithm, not the hardware used to run the algorithm
+* Bit O Notation is EVERYWHERE!!
+

@@ -1,0 +1,43 @@
+COVERING BIG 'O' OF BUILT IN JS FUNCTIONALITY:
+++++++++++++++++++++++++++++++++++++++++++++++
+
+Big O of Objects:
+=================
+Objects: unordered, key-value pairs
+Insertion: O(1)
+Removal: O(1)
+Searching: O(n)
+Access: O(1)
+** Very fast! (when you don't need any ordering...) **
+
+    Object Methods: 
+    ----------------
+    Object.keys(): O(n)
+    Object.values(): O(n)
+    Object.entries(): O(n)
+    Object.hasOwnProperty(): O(1)
+
+
+ARRRRRRAYS!!!!!
++++++++++++++++++++++++++++++++++++++++++++++++
+Big O of Arrays:
+================
+Insertion: depends...
+Removal: depends...
+    * Pushing and Popping into an array (.push(), .pop()) is constant time: O(1)
+    * Unshifting (adding to beginning) and Shifting (removing from beginning) of array is: O(n) since it requires changing index of each array element
+Searching: O(n) - requires looping the array
+Access: O(1) - direct access by index no.
+
+    Array Methods:
+    ---------------
+    Array.push(): O(1)
+    Array.pop(): O(1)
+    Array.shift(): O(n)
+    Array.unshift(): O(n)
+    Array.concat(): O(n)
+    Array.slice(): O(n)
+    Array.splice(): O(n)
+    Array.sort(): O(n * log n)
+    Array.forEach(), .map(), .filter(), .reduce(), etc:  O(n)
+
