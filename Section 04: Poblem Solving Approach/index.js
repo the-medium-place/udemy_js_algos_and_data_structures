@@ -66,13 +66,21 @@ function charCount(str){
     // loop over string, for each character...
     for (let i=0; i<str.length; i++){
         const char = str[i].toLowerCase();
-        // if char is a number/letter and a key in object, add 1 to count
-        if (result[char] > 0){
-            result[char]++
-        }
-        // if char is a number/letter and is not in object, add the key and set value to 1
-        else {
-            result[char] = 1;
+        if ((/[a-z0-9]/).test(char)){
+            // refactored solutioin
+            //=====================
+            result[char] = ++result[char] || 1;
+
+            // original solution
+            // ===========================
+            // if char is a number/letter and a key in object, add 1 to count
+            // if (result[char] > 0){
+                // result[char]++
+            // }
+            // if char is a number/letter and is not in object, add the key and set value to 1
+            // else {
+                // result[char] = 1;
+            // }
         }
         // if char is something else (not num/ltr) don't do anything
         
